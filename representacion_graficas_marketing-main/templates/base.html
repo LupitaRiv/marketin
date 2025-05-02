@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Análisis de Marketing</title>
+    <!-- Incluir Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluir Plotly.js para gráficos -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Incluir estilos personalizados -->
+    <style>
+        .chart-container {
+            height: 500px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-gradient-to-r from-green-500 via-teal-500 to-blue-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold">Panel de Análisis de Marketing</h1>
+            
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-10">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Panel de Análisis de Marketing</p>
+        </div>
+    </footer>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>
